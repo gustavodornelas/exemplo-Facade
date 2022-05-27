@@ -26,11 +26,10 @@ public class ComputadorFacade {
 
         cpu.start();
         String hdBootInfo = hardDrive.read(BOOT_ADDRESS, 2048);
-        System.out.println(hdBootInfo);
-
         memoria.load(BOOT_ADDRESS, hdBootInfo);
+        cpu.load();
         cpu.execute();
         memoria.free(BOOT_ADDRESS, hdBootInfo);
+        cpu.free();
     }
-
 }

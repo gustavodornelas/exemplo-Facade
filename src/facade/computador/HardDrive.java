@@ -11,6 +11,7 @@ package facade.computador;
 public class HardDrive {
 
     public String read(int startPosition, int size) {
+        System.out.println("lê dados do HD");
         return "lê dados do HD";
     }
 
@@ -18,3 +19,6 @@ public class HardDrive {
         System.out.println("escreve dados no HD");
     }
 }
+
+
+
